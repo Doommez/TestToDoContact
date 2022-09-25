@@ -1,0 +1,87 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  
+}
+*{
+  box-sizing: border-box;
+}
+header{
+  background-color:#FFFFFF;
+  height: 70px;
+display: flex;
+justify-content: center;
+
+  
+}
+.header__container{
+  max-width: 1160px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button{
+  display: flex;
+  align-items: center;
+  font-family: Arial;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+color: #005BFE;
+border: none;
+background-color:#FFFFFF;
+  transition: all 0.1s;
+}
+.header__button svg{
+  margin-right: 16px;
+
+}
+.header__button:hover{
+  text-decoration: underline;
+}
+.btn-danger{
+  font-family: Arial;
+font-size: 14px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+height: 38px;
+width: 178px;
+
+}
+.btn-danger+span{
+  padding: 10px 0 10px 10px;
+}
+
+/* .btn-danger span:nth-child(even)::after{
+  content: "";
+  display: block;
+  background-color: #FFFFFF;
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+}
+.btn-danger span:nth-child(even)::before{
+  content: "";
+  display: block;
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  left: 5.25px;
+  top: 5.25px;
+}*/
+.btn-danger span:nth-child(even){
+  line-height: 0em;
+  padding: 0  0  0 11px;
+  text-align: center;
+  width: 11px;
+  height: 11px;
+} 
