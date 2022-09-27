@@ -1,21 +1,27 @@
-let modal=document.querySelectorAll("#modal")
+import { openModal } from './modal.js';
+import modal from './modal.js';
+import renderModal from './renderModal.js';
 
-console.log(modal[0]);
-modal[0].addEventListener("click",log)
-function log(e){
-  if(e.target.getAttribute('data-targetButton')=="closeButton"){
-   modal[0].classList.toggle("active");
-  }
-  
-}
+let buttonGroup=document.querySelector('[data-targetButton="groups"]'),
+buttonAdd=document.querySelector('[data-targetButton="addContacts"]')
 
-/* let buttons=document.querySelectorAll("button")
+buttonGroup.addEventListener('click',(e)=>{
+  renderModal(".modal","group")
+  modal('[data-targetButton="groups"]',".modal",'.modal__background')
+  openModal(".modal",'.modal__background')
+})
+buttonAdd.addEventListener('click',(e)=>{
+
+    renderModal(".modal","addContact")
+    modal('[data-targetButton="addContacts"]',".modal",'.modal__background')
+    openModal(".modal",'.modal__background')
+  })
 
 
-console.log(buttons);
-console.log(buttons[3].dataset.targetbutton);
-buttons[3].addEventListener("click", (e,this)=>buttons[3].dataset.targetbutton())
 
-function closeModal(e,this){
-  console.log(e.target,this)
-} */
+  let statekey='Друзья';
+  let state=[["Боганов Евгений Игоревич", "+375295919128"], ["Боганов Евгений Игоревич", "+375295919128"]]
+console.log(state);
+console.log(JSON.stringify(state));
+localStorage.setItem(statekey,JSON.stringify(state))
+console.log(localStorage.length);
