@@ -1,9 +1,9 @@
 
-function modalControlAddInfo(modalSelector,saveValueSelector,boxInputSelector){
+function modalControlAddInfo(modalSelector,saveValueSelector){
   const modal= document.querySelector(modalSelector),
   saveValue=modal.querySelector(saveValueSelector),
-  form=document.forms.modal,
-  boxInput=modal.querySelector(boxInputSelector)
+  form=document.forms.modal
+  
  
 
   let arg=[...form].forEach((item)=>{

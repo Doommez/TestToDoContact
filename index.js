@@ -16,7 +16,7 @@ buttonAdd.addEventListener('click',(e)=>{
     renderModal(".modal","addContact")
     modal('[data-targetButton="addContacts"]',".modal",'.modal__background')
     openModal(".modal",'.modal__background')
-    modalControlAddInfo(".modal","[data-modal='saveContact']",'.modal__main__group--inputs')
+    modalControlAddInfo(".modal","[data-modal='saveContact']")
   })
 
 
