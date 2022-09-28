@@ -23,8 +23,8 @@ function renderModal(modalSelector,type){
  
      header='Группы контактов'
      buttonGroup=`
-     <button type="button" class="btn btn-outline-none">Добавить</button>
-          <button type="button" class="btn btn btn-primary">Сохранить</button>
+     <button type="button" class="btn btn-outline-none" data-modal='add'>Добавить</button>
+          <button type="submit" form="modal" class="btn btn btn-primary" data-modal='saveContact'>Сохранить</button>
      `
   }else{
     for(let i=0;i<lengthGroups;i++){
@@ -43,7 +43,7 @@ function renderModal(modalSelector,type){
     `
     
     buttonGroup=`
-    <button type="button" class="btn btn btn-primary">Сохранить</button>
+    <button type="submit" form="modal" class="btn btn btn-primary" data-modal='saveContact'>Сохранить</button>
     `
   }
  modal.innerHTML=`
@@ -55,9 +55,9 @@ function renderModal(modalSelector,type){
         </button>
       </div>
       <div class="modal__main">
-        <div class="modal__main__group--inputs">
+        <form name='modal' id='modal' class="modal__main__group--inputs">
         ${item}
-        </div>
+        </form>
         <div class="modal__main__groups-buttons">
           ${buttonGroup}
         </div>
