@@ -3,12 +3,12 @@ function renderModal(modalSelector,type){
   const modal=document.querySelector(modalSelector);
   let header=null,
   lengthGroups=localStorage.length,
-  item=[],
+  item="",
   buttonGroup,
   state=[];
   if(type=='group'){
   for(let i=0;i<lengthGroups;i++){
-   item[i]=`
+   item+=`
      <div class="modal__main__input">
     <input type="text" readonly value="${localStorage.key(i)}">
     <button type="button">
@@ -33,7 +33,7 @@ function renderModal(modalSelector,type){
       `
     }
     header="Добавление контакта"
-    item=`
+    item+=`
     <input type="text" name='fio' value="Введите ФИО" />
     <input type="text" name='tel' value="Введите номер" />
     <select name="groups">
