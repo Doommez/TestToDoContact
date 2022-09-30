@@ -29,9 +29,4 @@ buttonAdd.addEventListener('click',(e)=>{
   renderCard('.accordion')
 
 
-  let statekey='Друзья';
-  let state=[]
-console.log(state);
-console.log(JSON.stringify(state));
-localStorage.setItem(statekey,JSON.stringify(state))
-console.log(localStorage.length);
+
