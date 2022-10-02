@@ -152,20 +152,23 @@ main li button:hover svg{
   display: flex;
   flex-direction: column;
 }
+.accordion p{
+  margin: 0 auto;
+}
 .modal{
-    display: block;
-    width: 312px;
-    min-height: 100vh;
-    background-color: #FFFFFF;
-    position: absolute;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 120%;
-    color: #000000;
-    border-right:1px solid rgba(0, 0, 0, .1) ;
-    transition:  0.5s;
+  display: block;
+  width: 312px;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  position: absolute;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #000000;
+  border-right:1px solid rgba(0, 0, 0, .1) ;
+  transition:  0.5s;
 }
 .modal.hidden{
   opacity: 0;
