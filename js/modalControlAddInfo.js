@@ -66,9 +66,7 @@ function submit(event,arrElementValueForm){
     if(localStorage.getItem(key)){
       let prevItem=JSON.parse(localStorage.getItem(key));
       let nextItem=null;
-      if(prevItem.length=1){
-        nextItem=[prevItem,[arg[0],arg[1]]]
-      }else nextItem=[...prevItem,[arg[0],arg[1]]]
+      nextItem=[...prevItem,[arg[0],arg[1]]]
       
       localStorage.setItem(key,JSON.stringify(nextItem))
       
